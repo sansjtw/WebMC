@@ -27,7 +27,7 @@ class MCFullScreenButton extends MCButton {
     };
     async connectedCallback() {
         await super.connectedCallback();
-        this.innerHTML = "full screen";
+        this.innerHTML = "全屏模式";
         this.style.position = "absolute";
         this.style.top = this.style.right = "10px";
         this.style.display = window.isTouchDevice && !isFullscreen()? "": "none";
