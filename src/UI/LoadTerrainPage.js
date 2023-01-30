@@ -12,10 +12,10 @@ class LoadTerrainPage extends Page {
     async connectedCallback() {
         await super.connectedCallback();
         let p = this.shadowRoot.getElementById("gen-out");
-        p.innerHTML = "Generating terrain...";
+        p.innerHTML = "生成地形中...";
         await sleep(70);
         let world = new World();
-        p.innerHTML = "Ready to render...";
+        p.innerHTML = "准备渲染中...";
         await sleep(70);
         let canvas = pm.getPageByID("play").mainCanvas;
         let renderer = new WorldRenderer(canvas, world);
